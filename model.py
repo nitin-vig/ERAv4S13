@@ -173,17 +173,36 @@ class LlamaAttention(nn.Module):
             k = k[:, :, None, :, :].expand(bsz, self.num_key_value_heads, self.num_key_value_groups, q_len, self.head_dim).reshape(bsz, self.num_heads, q_len, self.head_dim)
             v = v[:, :, None, :, :].expand(bsz, self.num_key_value_heads, self.num_key_value_groups, q_len, self.head_dim).reshape(bsz, self.num_heads, q_len, self.head_dim)
 
-        # 5. Calculate Attention Scores
-        attn_weights = torch.matmul(q, k.transpose(2, 3)) / math.sqrt(self.head_dim)
+        # 5. Scaled Dot Product Attention (Flash Attention / Memory Efficient Attention)
+        # We use PyTorch's optimized implementation which selects the best backend (FlashAttn, etc.)
+        # If passed an attention_mask, we might need to rely on the manual path if it's complex, 
+        # but for causal masking we can just use is_causal=True
         
+        # NOTE: F.scaled_dot_product_attention expects 40D input: [batch, heads, seq, head_dim]
+        # Our q, k, v are already in that format after transpose.
+        
+        # If we have a mask that is NOT the causal mask (e.g. padding mask), we need to handle it.
+        # But for training from scratch with standard causal LM, we usually just need causal mask.
+        
+        dropout_p = 0.0 # Could add to config if desired
+        
+        # We need to broadcast the Mask if it is provided
         if attention_mask is not None:
+             # Standard implementation if a custom mask is provided (rare for basic causal LM training)
+             attn_weights = torch.matmul(q, k.transpose(2, 3)) / math.sqrt(self.head_dim)
              attn_weights = attn_weights + attention_mask
-
-        # 6. Apply Softmax and Compute Weighted Sum
-        attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(q.dtype)
-        attn_output = torch.matmul(attn_weights, v)
+             attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(q.dtype)
+             attn_output = torch.matmul(attn_weights, v)
+        else:
+             # Optimized path
+             attn_output = F.scaled_dot_product_attention(
+                q, k, v, 
+                attn_mask=None, 
+                dropout_p=dropout_p, 
+                is_causal=True
+            )
         
-        # 7. Reshape back and apply output projection
+        # 6. Reshape back and apply output projection
         attn_output = attn_output.transpose(1, 2).contiguous().reshape(bsz, q_len, self.hidden_size)
         attn_output = self.o_proj(attn_output)
         
@@ -238,9 +257,12 @@ class SmolLMModel(nn.Module):
         
         # 2. Key Concept: Causal Mask
         # We want the model to predict the NEXT token, so it shouldn't see future tokens.
-        # We create a mask of -inf for upper triangle to block future positions.
-        mask = torch.full((seq_len, seq_len), float("-inf"), device=x.device)
-        mask = torch.triu(mask, diagonal=1)
+        # However, with F.scaled_dot_product_attention(is_causal=True), we don't need to pass an explicit mask
+        # unless dealing with padding.
+        # We pass None to allow the optimized attention to handle it.
+        mask = None
+        # mask = torch.full((seq_len, seq_len), float("-inf"), device=x.device)
+        # mask = torch.triu(mask, diagonal=1)
         
         # 3. Pass through all Transformer Layers
         for layer in self.layers:

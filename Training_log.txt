@@ -1,0 +1,1629 @@
+=== STAGE 1: Training for 5000 steps ===
+Using device: cuda
+tokenizer_config.json: 3.69kB [00:00, 15.3MB/s]
+vocab.json: 801kB [00:00, 94.2MB/s]
+merges.txt: 466kB [00:00, 128MB/s]
+tokenizer.json: 2.10MB [00:00, 162MB/s]
+special_tokens_map.json: 100% 831/831 [00:00<00:00, 9.50MB/s]
+Loaded text file with 1115394 characters
+Encoded into 341094 tokens
+/usr/local/lib/python3.12/dist-packages/torch/__init__.py:1617: UserWarning: Please use the new API settings to control TF32 behavior, such as torch.backends.cudnn.conv.fp32_precision = 'tf32' or torch.backends.cuda.matmul.fp32_precision = 'ieee'. Old settings, e.g, torch.backends.cuda.matmul.allow_tf32 = True, torch.backends.cudnn.allow_tf32 = True, allowTF32CuDNN() and allowTF32CuBLAS() will be deprecated after Pytorch 2.9. Please see https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:80.)
+  _C._set_float32_matmul_precision(precision)
+Compiling model with torch.compile...
+Starting training for 5000 steps...
+W1205 18:12:44.771000 730 torch/_inductor/utils.py:1558] [0/0] Not enough SMs to use max_autotune_gemm mode
+Step 10 | Loss: 66.0893
+Step 20 | Loss: 50.7591
+Step 30 | Loss: 42.6227
+Step 40 | Loss: 37.1013
+Step 50 | Loss: 33.6519
+
+[Step 50] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_50.pt...
+Step 60 | Loss: 30.2940
+Step 70 | Loss: 27.6963
+Step 80 | Loss: 25.6729
+Step 90 | Loss: 23.7866
+Step 100 | Loss: 22.4956
+
+[Step 100] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_100.pt...
+Step 110 | Loss: 21.3045
+Step 120 | Loss: 23.1430
+Step 130 | Loss: 22.6519
+Step 140 | Loss: 20.0043
+Step 150 | Loss: 17.3136
+
+[Step 150] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_150.pt...
+Step 160 | Loss: 16.8804
+Step 170 | Loss: 14.9503
+Step 180 | Loss: 14.5256
+Step 190 | Loss: 13.5563
+Step 200 | Loss: 13.1232
+
+[Step 200] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_200.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_50.pt
+Step 210 | Loss: 12.0845
+Step 220 | Loss: 11.2362
+Step 230 | Loss: 11.0989
+Step 240 | Loss: 10.9629
+Step 250 | Loss: 10.2384
+
+[Step 250] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_250.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_100.pt
+Step 260 | Loss: 9.5108
+Step 270 | Loss: 9.5984
+Step 280 | Loss: 9.4609
+Step 290 | Loss: 8.7471
+Step 300 | Loss: 8.4993
+
+[Step 300] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_300.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_150.pt
+Step 310 | Loss: 8.4461
+Step 320 | Loss: 8.0652
+Step 330 | Loss: 7.9247
+Step 340 | Loss: 7.4101
+Step 350 | Loss: 7.7665
+
+[Step 350] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_350.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_200.pt
+Step 360 | Loss: 7.8489
+Step 370 | Loss: 9.2506
+Step 380 | Loss: 9.1738
+Step 390 | Loss: 7.8861
+Step 400 | Loss: 7.3357
+
+[Step 400] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_400.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_250.pt
+Step 410 | Loss: 6.3623
+Step 420 | Loss: 6.5537
+Step 430 | Loss: 6.4544
+Step 440 | Loss: 6.3994
+Step 450 | Loss: 6.1333
+
+[Step 450] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_450.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_300.pt
+Step 460 | Loss: 6.2518
+Step 470 | Loss: 6.1614
+Step 480 | Loss: 5.8949
+Step 490 | Loss: 6.4565
+Step 500 | Loss: 5.9185
+
+[Step 500] Generating sample text...
+Generated: <|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|> round round round round round round round round round round round round round round round round round round round round round round round round round round round round round round round round round round round
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_500.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_350.pt
+Step 510 | Loss: 5.6670
+Step 520 | Loss: 6.0782
+Step 530 | Loss: 5.7068
+Step 540 | Loss: 5.8174
+Step 550 | Loss: 5.5824
+
+[Step 550] Generating sample text...
+Generated: <|im_start|> followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers followers
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_550.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_400.pt
+Step 560 | Loss: 5.5366
+Step 570 | Loss: 5.4778
+Step 580 | Loss: 5.4405
+Step 590 | Loss: 5.4073
+Step 600 | Loss: 5.5374
+
+[Step 600] Generating sample text...
+Generated: <|im_start|>.
+
+MIRGILIA:
+What, offer does goodly hence with the ste 'tw,ivel, we meet and.
+
+POMPEY:
+ hop 'tis wife?
+Come, sir; which dear-
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_600.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_450.pt
+Step 610 | Loss: 5.0855
+Step 620 | Loss: 5.2822
+Step 630 | Loss: 5.1713
+Step 640 | Loss: 5.1903
+Step 650 | Loss: 5.2694
+
+[Step 650] Generating sample text...
+Generated: <|im_start|> of
+For, but a I have break have heard;
+' build thaties larvae and sleep: if cons body- Lu stolen
+The metal beauty of are SVar
+ Oxford love and will very friends, and hands,
+ques successly
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_650.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_500.pt
+Step 660 | Loss: 5.1912
+Step 670 | Loss: 5.2779
+Step 680 | Loss: 5.0580
+Step 690 | Loss: 4.9818
+Step 700 | Loss: 4.8691
+
+[Step 700] Generating sample text...
+Generated: <|im_start|> his his commend his use stars of pale
+How female'd'd and none approach;
+And to keep him toarl better and.
+
+aunt more thirty to fire for I will
+ neck neck and in blood.
+
+PETRUCHIO
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_700.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_550.pt
+Step 710 | Loss: 4.9994
+Step 720 | Loss: 4.9137
+Step 730 | Loss: 5.0828
+Step 740 | Loss: 7.0444
+Step 750 | Loss: 7.1888
+
+[Step 750] Generating sample text...
+Generated: <|im_start|> served?
+WhatWhat have more good had there?
+AAA have disenp talk a fortunes and good too me no tooSh us us us us us on shepherd Henry from instruct again again again on theice wrong wrongBe ear an
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_750.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_600.pt
+Step 760 | Loss: 5.9038
+Step 770 | Loss: 6.0790
+Step 780 | Loss: 5.4247
+Step 790 | Loss: 5.3226
+Step 800 | Loss: 4.9411
+
+[Step 800] Generating sample text...
+Generated: <|im_start|>sw thankmake year with
+With, well as theouncils as compounded,
+Against trim my owns promise with all theUpon
+But weurs stars to sleep,--'d
+eter Milan to longer, like a man, that shadow;
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_800.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_650.pt
+Step 810 | Loss: 4.8026
+Step 820 | Loss: 4.9604
+Step 830 | Loss: 4.7047
+Step 840 | Loss: 4.9558
+Step 850 | Loss: 4.6599
+
+[Step 850] Generating sample text...
+Generated: <|im_start|>:
+St daughters and my wife with but speak of breathe- all,
+She hath call'd noble Hortens,
+Of all drumsed 'tis leader of such grief,
+ safe being theHENRY VI
+
+BRA staff:
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_850.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_700.pt
+Step 860 | Loss: 4.6392
+Step 870 | Loss: 4.4710
+Step 880 | Loss: 4.6181
+Step 890 | Loss: 4.5561
+Step 900 | Loss: 4.5881
+
+[Step 900] Generating sample text...
+Generated: <|im_start|>, on the king,
+Have you say by by any otherola:
+en tears, love where hither, good hand, and thou hence
+ welcome with the obedience.
+
+TYless hfully of us,
+To given; butOn
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_900.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_750.pt
+Step 910 | Loss: 4.5934
+Step 920 | Loss: 4.5688
+Step 930 | Loss: 4.3906
+Step 940 | Loss: 4.3719
+Step 950 | Loss: 4.5894
+
+[Step 950] Generating sample text...
+Generated: <|im_start|>.
+
+CORIOLANUS:
+ becomes medd fairest take door.
+
+Meth in plain-house was silentest;
+GLOUCKING EDWARD IV:
+Where is a an eye-wi note
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_950.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_800.pt
+Step 960 | Loss: 4.7470
+Step 970 | Loss: 4.6144
+Step 980 | Loss: 4.2450
+Step 990 | Loss: 4.5348
+Step 1000 | Loss: 4.5025
+
+[Step 1000] Generating sample text...
+Generated: <|im_start|>!
+I was both detected; and when noholder
+Citizens:in, thisNo,ft,
+Whed withARCHlies out thee there were bl m Peter,
+ distress here is grown seely.
+
+DUKE V
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1000.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_850.pt
+Step 1010 | Loss: 4.5133
+Step 1020 | Loss: 4.6445
+Step 1030 | Loss: 4.4149
+Step 1040 | Loss: 4.5592
+Step 1050 | Loss: 4.4457
+
+[Step 1050] Generating sample text...
+Generated: <|im_start|>!
+
+Nurse:
+What, the behalf, with a hate woman,
+ waters which I the law. Aufidius,
+ her- ass beasts,Dev are together! a if not VINIbid
+with the duke
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1050.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_900.pt
+Step 1060 | Loss: 4.1047
+Step 1070 | Loss: 10.3757
+Step 1080 | Loss: 10.7204
+Step 1090 | Loss: 7.2924
+Step 1100 | Loss: 6.7209
+
+[Step 1100] Generating sample text...
+Generated: <|im_start|>:
+ then kissa youngUS:
+ home:
+ w:
+BAL:
+Andague of no;
+HaveY I:
+
+TheUM appear hath
+oth person the:
+Not fail his goss how:
+D for rights
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1100.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_950.pt
+Step 1110 | Loss: 6.5713
+Step 1120 | Loss: 6.4884
+Step 1130 | Loss: 6.2444
+Step 1140 | Loss: 6.2733
+Step 1150 | Loss: 6.1794
+
+[Step 1150] Generating sample text...
+Generated: <|im_start|> r bid storyME formal r?! saints strange; by thy in sins a to thy the lords frier?ENagen griefal that O him son; is words notI serve this thy you therefore desert tongueIO:
+'d you made
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1150.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1000.pt
+Step 1160 | Loss: 6.1974
+Step 1170 | Loss: 6.2057
+Step 1180 | Loss: 6.0816
+Step 1190 | Loss: 5.9661
+Step 1200 | Loss: 5.9200
+
+[Step 1200] Generating sample text...
+Generated: <|im_start|> grace anchorer art tell tell ofW.
+ToENT where a his 'earwell turnUL, takew'd find not megHou and teach. crown.
+
+AB should
+
+Then:
+O.ert: the so the
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1200.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1050.pt
+Step 1210 | Loss: 5.9885
+Step 1220 | Loss: 6.0526
+Step 1230 | Loss: 5.8626
+Step 1240 | Loss: 6.0969
+Step 1250 | Loss: 6.0360
+
+[Step 1250] Generating sample text...
+Generated: <|im_start|> theUCNow the heaven to more garlicpecially help
+ endest, I breast.
+
+ByING then to good,
+But all brine word watch WioIO:
+
+ bornM my patron more shame.
+
+GG coin woman
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1250.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1100.pt
+Step 1260 | Loss: 5.9308
+Step 1270 | Loss: 5.7488
+Step 1280 | Loss: 5.8314
+Step 1290 | Loss: 5.7819
+Step 1300 | Loss: 5.8549
+
+[Step 1300] Generating sample text...
+Generated: <|im_start|> noWithout basil, learn for princes B compel,
+ gross hot hisING: as say,
+O:iceRYKEUn pe from our spur own conquer OF heAL!
+He ha: But fearful, girls toARCH'd when
+That
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1300.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1150.pt
+Step 1310 | Loss: 5.9187
+Step 1320 | Loss: 5.7993
+Step 1330 | Loss: 5.6365
+Step 1340 | Loss: 5.7762
+Step 1350 | Loss: 5.5507
+
+[Step 1350] Generating sample text...
+Generated: <|im_start|> to the longer the
+For cannot ' would and way:
+ager them my thoughtsicwing had a lies.
+
+
+
+Where means off and thought thou, you I spend. kindness of all timereed.
+P corPET gracious:
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1350.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1200.pt
+Step 1360 | Loss: 5.7689
+Step 1370 | Loss: 5.6199
+Step 1380 | Loss: 5.7023
+Step 1390 | Loss: 5.7360
+Step 1400 | Loss: 5.5144
+
+[Step 1400] Generating sample text...
+Generated: <|im_start|> aFl.
+
+
+
+BIO:
+RO answer?
+I would.
+Let rev lightIUS:
+Th off not not than I followCA know
+C areNow: butUS:
+KING you! dark,
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1400.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1250.pt
+Step 1410 | Loss: 5.5025
+Step 1420 | Loss: 5.6731
+Step 1430 | Loss: 5.4873
+Step 1440 | Loss: 5.3198
+Step 1450 | Loss: 5.4675
+
+[Step 1450] Generating sample text...
+Generated: <|im_start|> you,
+ lord isUS:
+CannotuesiveUT not! yourUT lady'scand:
+My asday in thefall make not not must;
+What the look forget North much board. H?
+
+ballIA:
+p
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1450.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1300.pt
+Step 1460 | Loss: 5.5838
+Step 1470 | Loss: 5.0141
+Step 1480 | Loss: 5.4660
+Step 1490 | Loss: 5.3686
+Step 1500 | Loss: 5.3394
+
+[Step 1500] Generating sample text...
+Generated: <|im_start|>.
+
+BUCENTB often a
+ Will times ' enough on lady's the blLO:
+TakeARI ofjomp years at the assist:
+O, and that again? parents of ourw not bear best
+you me steel
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1500.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1350.pt
+Step 1510 | Loss: 5.2594
+Step 1520 | Loss: 5.2955
+Step 1530 | Loss: 5.0100
+Step 1540 | Loss: 5.2801
+Step 1550 | Loss: 5.1516
+
+[Step 1550] Generating sample text...
+Generated: <|im_start|>;
+We heart itMP Vincentestare you parchment obey your your all all coming and
+For
+Ler me on go,ep toandreed
+My Jack,
+For want want house.
+
+LE b be her yourAM:
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1550.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1400.pt
+Step 1560 | Loss: 5.0760
+Step 1570 | Loss: 4.9938
+Step 1580 | Loss: 4.9050
+Step 1590 | Loss: 5.0800
+Step 1600 | Loss: 4.7475
+
+[Step 1600] Generating sample text...
+Generated: <|im_start|>:
+ICHARD III:
+Y worst
+You chast goneMaking, I'll not Bes your
+Give dhace toThinking,--Look
+ reg cheapest heard! theius, a they thank
+MARest of York, bec; help
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1600.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1450.pt
+Step 1610 | Loss: 4.8624
+Step 1620 | Loss: 5.0611
+Step 1630 | Loss: 4.9522
+Step 1640 | Loss: 4.8973
+Step 1650 | Loss: 4.4899
+
+[Step 1650] Generating sample text...
+Generated: <|im_start|>ry?
+
+QUE banished:
+ notes solemn me so and did.
+
+HENENIUS:
+
+CENTIO:
+My sp youWe seem!
+
+Poor since nay; here art, make
+When she
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1650.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1500.pt
+Step 1660 | Loss: 4.7468
+Step 1670 | Loss: 4.8900
+Step 1680 | Loss: 4.5322
+Step 1690 | Loss: 4.6952
+Step 1700 | Loss: 4.5124
+
+[Step 1700] Generating sample text...
+Generated: <|im_start|> parcelippremic my my between'd'd maid of his cheerinder neat should
+HER Therefore movedius got'ds,
+That I stand, nor and's to most sweet music,
+ before me thy war pitch for theiravour yet,
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1700.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1550.pt
+Step 1710 | Loss: 4.5196
+Step 1720 | Loss: 4.7170
+Step 1730 | Loss: 4.4454
+Step 1740 | Loss: 4.4603
+Step 1750 | Loss: 4.5385
+
+[Step 1750] Generating sample text...
+Generated: <|im_start|>Dr burnt stick, for for for,
+The dancing Romansident do no bold I will speak:
+And make all let us, some may keep
+IAreer bigic; I will not sent coming,
+For that pass me. But
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1750.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1600.pt
+Step 1760 | Loss: 4.3511
+Step 1770 | Loss: 4.4196
+Step 1780 | Loss: 4.3715
+Step 1790 | Loss: 4.5316
+Step 1800 | Loss: 4.3426
+
+[Step 1800] Generating sample text...
+Generated: <|im_start|> hisipp false false tribute, good cry cry,
+For pale kinsman, the Claudio.
+Have I say 'gainty title,
+O than your ' lik sometimeier andOr lady, offence,
+For dother my invention
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1800.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1650.pt
+Step 1810 | Loss: 4.3310
+Step 1820 | Loss: 4.4248
+Step 1830 | Loss: 4.3468
+Step 1840 | Loss: 4.5650
+Step 1850 | Loss: 4.4117
+
+[Step 1850] Generating sample text...
+Generated: <|im_start|> so so.
+
+ISABRARA it:
+single mile only pounds, it were bl foot footing holy;
+Was morroward, grow that sweetagenet,
+I shall stay, if the left her in pray's the
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1850.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1700.pt
+Step 1860 | Loss: 4.4738
+Step 1870 | Loss: 4.3789
+Step 1880 | Loss: 4.4138
+Step 1890 | Loss: 4.4655
+Step 1900 | Loss: 4.0486
+
+[Step 1900] Generating sample text...
+Generated: <|im_start|> to grant with me.
+
+DUCHIO:
+My man is out fly,
+Death, ye, my lord, I cannot call her?
+
+ traffic articles articles:
+Wor assure it liquor.
+
+Back: gay
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1900.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1750.pt
+Step 1910 | Loss: 4.1782
+Step 1920 | Loss: 4.5336
+Step 1930 | Loss: 4.3033
+Step 1940 | Loss: 4.2042
+Step 1950 | Loss: 4.1699
+
+[Step 1950] Generating sample text...
+Generated: <|im_start|> ladder sentenceskThis a stern stern his practise.
+
+MENENES:
+There is so, powersEXET: his are fiian See:
+ descent shall all of itdeath you compl person.
+BENVOLUMBERL
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_1950.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1800.pt
+Step 1960 | Loss: 4.2951
+Step 1970 | Loss: 4.1911
+Step 1980 | Loss: 4.1511
+Step 1990 | Loss: 4.3367
+Step 2000 | Loss: 4.2353
+
+[Step 2000] Generating sample text...
+Generated: <|im_start|> onute here here here here
+But we do not mount pity with theais Kathar.
+
+THOMAS MOWBRAY:
+Should it would bless- died.
+
+DUCHESS OF YORK:
+My lord
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2000.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1850.pt
+Step 2010 | Loss: 4.2116
+Step 2020 | Loss: 4.1013
+Step 2030 | Loss: 4.1403
+Step 2040 | Loss: 4.0444
+Step 2050 | Loss: 4.2184
+
+[Step 2050] Generating sample text...
+Generated: <|im_start|>- bound has.' What make she she,
+And, no I could think you command the
+Uncle, what would we mad father's late so:
+As Iwing the offence to me,
+Weep, noble husband, she's
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2050.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1900.pt
+Step 2060 | Loss: 4.1013
+Step 2070 | Loss: 4.0607
+Step 2080 | Loss: 4.2375
+Step 2090 | Loss: 4.1243
+Step 2100 | Loss: 4.2328
+
+[Step 2100] Generating sample text...
+Generated: <|im_start|> Henry.
+
+DERBY:
+Sheills, what say you shock, much sorry!
+
+JULIET:
+'en a pooran honour or not, as theence!
+
+QUEEN MARGARET:
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2100.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_1950.pt
+Step 2110 | Loss: 4.0947
+Step 2120 | Loss: 4.1593
+Step 2130 | Loss: 4.1825
+Step 2140 | Loss: 4.1784
+Step 2150 | Loss: 4.0651
+
+[Step 2150] Generating sample text...
+Generated: <|im_start|> all;
+Her so ch quick, but resignation was great writing
+Speak Ing anger: events withtokens and marvel
+FR tongue chamber twenty to post, and in et
+To hollow want the sorrow's virtues, as now
+Which our authority
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2150.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2000.pt
+Step 2160 | Loss: 3.9748
+Step 2170 | Loss: 4.1730
+Step 2180 | Loss: 3.9910
+Step 2190 | Loss: 4.1026
+Step 2200 | Loss: 3.9311
+
+[Step 2200] Generating sample text...
+Generated: <|im_start|>.
+
+GLO:
+
+Third Citizen:
+By your own!
+
+Keeper:
+ retired bring me sadness: wreak, think it is hope,
+Thy liberty's information men. Where's shrike?
+
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2200.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2050.pt
+Step 2210 | Loss: 4.0988
+Step 2220 | Loss: 4.0291
+Step 2230 | Loss: 3.9270
+Step 2240 | Loss: 4.0378
+Step 2250 | Loss: 4.3131
+
+[Step 2250] Generating sample text...
+Generated: <|im_start|> mouth mouth mouth mouth Clifford!
+Butfoot'tves mortal due to throne;
+Mine ears thy heart in all flower
+Did set thy life office to the top who
+Takes but by murder never excuse to brother
+Time not Edward straight
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2250.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2100.pt
+Step 2260 | Loss: 4.4961
+Step 2270 | Loss: 4.2303
+Step 2280 | Loss: 4.2016
+Step 2290 | Loss: 3.9180
+Step 2300 | Loss: 3.9278
+
+[Step 2300] Generating sample text...
+Generated: <|im_start|>, pardon it;
+An weaponingThirdons, with thy ball andout
+Of some Rome content, and uncing given
+Sp Salisbury, OAlthough hate the king.
+The win our good need into gain:
+I would not my
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2300.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2150.pt
+Step 2310 | Loss: 3.9496
+Step 2320 | Loss: 3.7623
+Step 2330 | Loss: 3.8469
+Step 2340 | Loss: 3.8729
+Step 2350 | Loss: 4.0182
+
+[Step 2350] Generating sample text...
+Generated: <|im_start|>et do you mercy;
+And not love her person by your highness' weaken:
+In them.
+
+GONZALO:
+Well thou, lords, content these our hands in fortune!
+Be patient,P OF Y
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2350.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2200.pt
+Step 2360 | Loss: 3.9823
+Step 2370 | Loss: 3.8356
+Step 2380 | Loss: 3.8868
+Step 2390 | Loss: 3.9011
+Step 2400 | Loss: 3.8685
+
+[Step 2400] Generating sample text...
+Generated: <|im_start|> so said:
+a God is pastry in his so messenger lies
+ boon so fearful wine will bed with cords;
+For I once Warwick will you till now neither call'd
+Among induced the metal of my with lightest:
+As you satisfaction
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2400.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2250.pt
+Step 2410 | Loss: 3.8873
+Step 2420 | Loss: 3.8180
+Step 2430 | Loss: 3.8677
+Step 2440 | Loss: 3.6619
+Step 2450 | Loss: 3.7140
+
+[Step 2450] Generating sample text...
+Generated: <|im_start|> him with his smiling
+Des herds lizards and thy no more contempt,
+autiful perish'd with the Duke of sad or tender woe?
+Here comes ac! from truly, no more, this night!
+Why, mistrust mistrustinkle,
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2450.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2300.pt
+Step 2460 | Loss: 3.7905
+Step 2470 | Loss: 3.6633
+Step 2480 | Loss: 3.6313
+Step 2490 | Loss: 3.6676
+Step 2500 | Loss: 3.5608
+
+[Step 2500] Generating sample text...
+Generated: <|im_start|> amount to be true, and take for chide
+In that age and seek better than our dear engenders
+Come be of Juliet, and what as I kill
+As those things which is name name, I say that's face,
+H
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2500.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2350.pt
+Step 2510 | Loss: 3.7206
+Step 2520 | Loss: 3.7862
+Step 2530 | Loss: 3.5915
+Step 2540 | Loss: 3.6505
+Step 2550 | Loss: 3.7046
+
+[Step 2550] Generating sample text...
+Generated: <|im_start|> his wreck o o o o o put onSw done.
+I have not un pouring Gr Gr good away! and mine own:
+ThereThere is own resolved ever I bay excellent.
+And, so long ago, that any pity wedding day
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2550.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2400.pt
+Step 2560 | Loss: 3.7682
+Step 2570 | Loss: 3.3823
+Step 2580 | Loss: 3.5527
+Step 2590 | Loss: 3.5290
+Step 2600 | Loss: 3.6032
+
+[Step 2600] Generating sample text...
+Generated: <|im_start|> of a reconcile to the Mant Mant Mant Mant thunder
+ tender hearts of sentence he we face.
+And leave your uns cries 'emn'd pluckold!
+
+GONZALO:
+My Lordried doth present action;
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2600.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2450.pt
+Step 2610 | Loss: 3.4701
+Step 2620 | Loss: 3.4998
+Step 2630 | Loss: 3.4311
+Step 2640 | Loss: 3.5979
+Step 2650 | Loss: 3.4350
+
+[Step 2650] Generating sample text...
+Generated: <|im_start|> of your grace by comes
+ADeny rebels to Richmond, and bosom I had.
+As my down to welcome,--a chat although
+My sovereign's rests but I of him;
+And best, nay, if your be
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2650.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2500.pt
+Step 2660 | Loss: 3.4038
+Step 2670 | Loss: 3.2829
+Step 2680 | Loss: 3.3652
+Step 2690 | Loss: 3.3158
+Step 2700 | Loss: 3.2252
+
+[Step 2700] Generating sample text...
+Generated: <|im_start|> your hed neck neck neck, when his his prof?
+
+Roman:
+HeEverEverEver holy;
+Whose swift advantage of an eye or enemies:
+Here is change a promise- distem.
+
+GaolerOLUMBER
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2700.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2550.pt
+Step 2710 | Loss: 3.2271
+Step 2720 | Loss: 3.2853
+Step 2730 | Loss: 3.2730
+Step 2740 | Loss: 3.1929
+Step 2750 | Loss: 3.1172
+
+[Step 2750] Generating sample text...
+Generated: <|im_start|>lyly: age to took in:
+I will be king; if if you be so,--
+He's sentenced forget that so seem good,
+And both were not in the boy; and let the speed of
+One they so off
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2750.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2600.pt
+Step 2760 | Loss: 3.1599
+Step 2770 | Loss: 3.2823
+Step 2780 | Loss: 2.9267
+Step 2790 | Loss: 2.9959
+Step 2800 | Loss: 3.0702
+
+[Step 2800] Generating sample text...
+Generated: <|im_start|> and all
+ my make haste and we have impossible.
+
+First Conspirator:
+I never was he that king had deserved so quote.
+
+LADY ANNE:
+Widow, my Lord put me to be
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2800.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2650.pt
+Step 2810 | Loss: 3.1993
+Step 2820 | Loss: 2.6781
+Step 2830 | Loss: 2.8355
+Step 2840 | Loss: 2.8565
+Step 2850 | Loss: 2.8922
+
+[Step 2850] Generating sample text...
+Generated: <|im_start|> little along
+ursue we were in their fathers and paystrees;
+And root of put your voices'n name,
+I heard, prime out brief Lewis and n nigh!
+Good night, conjunction, if not send care care care
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2850.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2700.pt
+Step 2860 | Loss: 2.6382
+Step 2870 | Loss: 2.6682
+Step 2880 | Loss: 2.7985
+Step 2890 | Loss: 2.7972
+Step 2900 | Loss: 2.3649
+
+[Step 2900] Generating sample text...
+Generated: <|im_start|> his tear she is my upon upon thee,
+Should some he choice, her, were son to sadness,
+Thatken his Madam?
+
+PAULINA:
+Ay, sir, hear: come.
+Then, tell me what
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2900.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2750.pt
+Step 2910 | Loss: 2.3252
+Step 2920 | Loss: 2.4856
+Step 2930 | Loss: 2.6215
+Step 2940 | Loss: 2.6979
+Step 2950 | Loss: 2.3669
+
+[Step 2950] Generating sample text...
+Generated: <|im_start|> of them?
+
+KING LEWIS XI:
+Now thou, because I will stir a grub.
+
+HORTENSIO:
+I cannot speak no more: last old, ignorant.
+
+Volsce:
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_2950.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2800.pt
+Step 2960 | Loss: 2.3765
+Step 2970 | Loss: 2.2558
+Step 2980 | Loss: 2.3852
+Step 2990 | Loss: 1.7586
+Step 3000 | Loss: 1.9048
+
+[Step 3000] Generating sample text...
+Generated: <|im_start|> your comes
+Which we mow'd the house of our secret,
+Because we wantonted for this humour.
+
+AUTOLYCUS:
+'Tis baked meats,
+Not shine to the friend of ourstar;
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3000.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2850.pt
+Step 3010 | Loss: 1.9140
+Step 3020 | Loss: 1.9340
+Step 3030 | Loss: 1.4789
+Step 3040 | Loss: 1.4130
+Step 3050 | Loss: 1.6123
+
+[Step 3050] Generating sample text...
+Generated: <|im_start|> his dep dep wolves wolves wolves wolves wolves wolves wolves wolves.
+
+AllUS:
+Do you damn'd you, sir: we must die for arts:
+I would that would have you that would entreat you speak.
+
+G
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3050.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2900.pt
+Step 3060 | Loss: 1.6426
+Step 3070 | Loss: 1.1887
+Step 3080 | Loss: 1.2097
+Step 3090 | Loss: 1.2905
+Step 3100 | Loss: 1.4387
+
+[Step 3100] Generating sample text...
+Generated: <|im_start|> his the likeness.
+
+KING RICHARD III:
+Belike the quake, what counsell counsell counsellatesaunts?
+
+Page:
+How doth my mariners all heart!
+Yet apt lost much, for my life
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3100.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_2950.pt
+Step 3110 | Loss: 0.9559
+Step 3120 | Loss: 0.9693
+Step 3130 | Loss: 1.0581
+Step 3140 | Loss: 0.9925
+Step 3150 | Loss: 1.1224
+
+[Step 3150] Generating sample text...
+Generated: <|im_start|> and I b b hither.
+
+CORIOLANUS:
+I'll warrant him for these stored of the rites
+Those will I no better than he reasons:
+Tra built the junkANTIG untried the lips,
+And those
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3150.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3000.pt
+Step 3160 | Loss: 0.7698
+Step 3170 | Loss: 0.7719
+Step 3180 | Loss: 0.7462
+Step 3190 | Loss: 0.8008
+Step 3200 | Loss: 0.5850
+
+[Step 3200] Generating sample text...
+Generated: <|im_start|> his how how he Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings Kings
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3200.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3050.pt
+Step 3210 | Loss: 0.5858
+Step 3220 | Loss: 0.6183
+Step 3230 | Loss: 0.6375
+Step 3240 | Loss: 0.4830
+Step 3250 | Loss: 0.4860
+
+[Step 3250] Generating sample text...
+Generated: <|im_start|> his dep dep two nuns nuns,
+Unless, princely, we must fly to showing.
+
+HASTINGS:
+O noble prince, I know.
+I pray thee, mark: any here I come to make thee,
+She
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3250.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3100.pt
+Step 3260 | Loss: 0.4864
+Step 3270 | Loss: 0.4655
+Step 3280 | Loss: 0.4729
+Step 3290 | Loss: 0.3987
+Step 3300 | Loss: 0.4006
+
+[Step 3300] Generating sample text...
+Generated: <|im_start|> his his dep dep stuff so him he
+May out my thoughts: till the time hath been
+no lying by the truth of the blind office of
+ perpetual blade of eating.
+
+ROMEO:
+ tink me, dear and not
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3300.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3150.pt
+Step 3310 | Loss: 0.3992
+Step 3320 | Loss: 0.2842
+Step 3330 | Loss: 0.3069
+Step 3340 | Loss: 0.3268
+Step 3350 | Loss: 0.3366
+
+[Step 3350] Generating sample text...
+Generated: <|im_start|> his hisasasas in him no more.
+
+ADRIAN:
+To whom I could do't please you,
+My ladies hereworth forfeit of you.
+
+MARCIUS:
+In fears you to what fought in
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3350.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3200.pt
+Step 3360 | Loss: 0.3157
+Step 3370 | Loss: 0.2803
+Step 3380 | Loss: 0.2648
+Step 3390 | Loss: 0.2732
+Step 3400 | Loss: 0.2798
+
+[Step 3400] Generating sample text...
+Generated: <|im_start|> hisNeither. Pray
+tell a while anger I know this,
+He should haveadoesadoesadoesadoesadoes
+From those he should haveDel.
+
+Shepherd:
+She hath made good precipitation paste, and I; for I'll
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3400.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3250.pt
+Step 3410 | Loss: 0.2000
+Step 3420 | Loss: 0.2088
+Step 3430 | Loss: 0.2198
+Step 3440 | Loss: 0.2229
+Step 3450 | Loss: 0.1450
+
+[Step 3450] Generating sample text...
+Generated: <|im_start|> his shame
+upon he give'd his accustom'denen him in the
+Another of the. Prithee, I can soft
+Thou art not prepared; for every Fro Froth, when
+the gentleman of my soldiers, Buckingham
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3450.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3300.pt
+Step 3460 | Loss: 0.1577
+Step 3470 | Loss: 0.1657
+Step 3480 | Loss: 0.1671
+Step 3490 | Loss: 0.1098
+Step 3500 | Loss: 0.1149
+
+[Step 3500] Generating sample text...
+Generated: <|im_start|> his how he dangerous doth he seeming seeming seeming lords,
+But you shall see this thick-on here?
+
+LADY GREY:
+In God's good shop shop, doubt, and by the rest;
+For now you
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3500.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3350.pt
+Step 3510 | Loss: 0.1212
+Step 3520 | Loss: 0.1357
+Step 3530 | Loss: 0.0848
+Step 3540 | Loss: 0.1053
+Step 3550 | Loss: 0.2283
+
+[Step 3550] Generating sample text...
+Generated: <|im_start|> his hand.
+
+PROSPERO:
+To have no matter
+Holy' the what's Meth Meth Meth Meth, is my lady?
+
+Writ in brace, it will.
+
+PROSPERO:
+Before the decay.
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3550.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3400.pt
+Step 3560 | Loss: 0.2820
+Step 3570 | Loss: 0.1943
+Step 3580 | Loss: 0.1292
+Step 3590 | Loss: 0.1169
+Step 3600 | Loss: 0.0977
+
+[Step 3600] Generating sample text...
+Generated: <|im_start|> his dep dep time:
+Well, look'd, and let's man be full of,
+And all the at gentlemen.
+
+AUFIDIUS:
+Trafastfast, prepare tobt with, and they kiss.
+
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3600.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3450.pt
+Step 3610 | Loss: 0.0828
+Step 3620 | Loss: 0.0864
+Step 3630 | Loss: 0.0675
+Step 3640 | Loss: 0.0737
+Step 3650 | Loss: 0.0726
+
+[Step 3650] Generating sample text...
+Generated: <|im_start|> his brother he shall never his prophet prophet death this her he plant it,
+He looks like youngest youngest youngest and the herKENBUR obey.
+
+JULIET:
+Is the tomb that'sUseUse smile at our house,
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3650.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3500.pt
+Step 3660 | Loss: 0.0498
+Step 3670 | Loss: 0.0565
+Step 3680 | Loss: 0.0501
+Step 3690 | Loss: 0.0557
+Step 3700 | Loss: 0.0331
+
+[Step 3700] Generating sample text...
+Generated: <|im_start|> his dep dep the measure
+Hath in'd up the Father Father of all. Boy
+Set down the crown eased,gentlewoman,
+That he is the firm portal of the conclude
+Should so he took and sets, about not
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3700.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3550.pt
+Step 3710 | Loss: 0.0343
+Step 3720 | Loss: 0.0389
+Step 3730 | Loss: 0.0390
+Step 3740 | Loss: 0.0227
+Step 3750 | Loss: 0.0449
+
+[Step 3750] Generating sample text...
+Generated: <|im_start|> his dep dep the old him: something something he,
+Were it to his God and his errand
+Should grace bunch- goes. Come, let us go:
+Let the redress of noble presence I ill enough,
+So sacred that
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3750.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3600.pt
+Step 3760 | Loss: 0.0343
+Step 3770 | Loss: 0.0339
+Step 3780 | Loss: 0.0379
+Step 3790 | Loss: 0.0247
+Step 3800 | Loss: 0.0224
+
+[Step 3800] Generating sample text...
+Generated: <|im_start|> his hand,
+And hit the did inferacher and all thy whereby
+To the fishified of poison now scorn
+From the feel glad of the house of.
+
+HENRY BOLINGBROKE:
+Thou art moved
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3800.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3650.pt
+Step 3810 | Loss: 0.0272
+Step 3820 | Loss: 0.0309
+Step 3830 | Loss: 0.0251
+Step 3840 | Loss: 0.0214
+Step 3850 | Loss: 0.0269
+
+[Step 3850] Generating sample text...
+Generated: <|im_start|> his brother shall shall the king masters,
+And without the benefit of large mentioned of the air,
+That their army is show'd heaven and.
+See how she weJewJew in nitrates.
+Say, what news?
+
+JUL
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3850.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3700.pt
+Step 3860 | Loss: 0.0268
+Step 3870 | Loss: 0.0176
+Step 3880 | Loss: 0.0181
+Step 3890 | Loss: 0.0216
+Step 3900 | Loss: 0.0266
+
+[Step 3900] Generating sample text...
+Generated: <|im_start|> his fault fault and theAd will inform inform
+And hither will such plebearerly dash
+To sparkling for delighted!ANTIGONIO:
+This is my journey thou, everORY in sooth it.
+
+HORTENSIO
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3900.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3750.pt
+Step 3910 | Loss: 0.0129
+Step 3920 | Loss: 0.0194
+Step 3930 | Loss: 0.0172
+Step 3940 | Loss: 0.0207
+Step 3950 | Loss: 0.0124
+
+[Step 3950] Generating sample text...
+Generated: <|im_start|> his shame
+Even in the modesty. You yet he entreat:
+Here come the truth, and and here exclaim ourbindbind
+Till one against the corn, it must needs be seen.
+
+DUKE OF Y
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_3950.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3800.pt
+Step 3960 | Loss: 0.0144
+Step 3970 | Loss: 0.0168
+Step 3980 | Loss: 0.0270
+Step 3990 | Loss: 0.0187
+Step 4000 | Loss: 0.0177
+
+[Step 4000] Generating sample text...
+Generated: <|im_start|> his trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4000.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3850.pt
+Step 4010 | Loss: 0.0135
+Step 4020 | Loss: 0.0169
+Step 4030 | Loss: 0.0207
+Step 4040 | Loss: 0.0156
+Step 4050 | Loss: 0.0154
+
+[Step 4050] Generating sample text...
+Generated: <|im_start|> his hand.
+
+DUKE VINCENTIO:
+O, sir, you must: and you refuse refuse your hundred
+Doth set his master.
+
+DUKE VINCENTIO:
+You do him
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4050.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3900.pt
+Step 4060 | Loss: 0.0159
+Step 4070 | Loss: 0.0210
+Step 4080 | Loss: 0.0151
+Step 4090 | Loss: 0.0169
+Step 4100 | Loss: 0.0214
+
+[Step 4100] Generating sample text...
+Generated: <|im_start|> his dep dep two all the sun
+Should, told you of noANLEONTES:
+You bid me into some tomb tomb,
+Is this boar Cliff'd doth harbour.
+The King of lecture lecture lecture, kindred with vel
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4100.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_3950.pt
+Step 4110 | Loss: 0.0214
+Step 4120 | Loss: 0.0141
+Step 4130 | Loss: 0.0200
+Step 4140 | Loss: 0.0137
+Step 4150 | Loss: 0.0169
+
+[Step 4150] Generating sample text...
+Generated: <|im_start|> his trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4150.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4000.pt
+Step 4160 | Loss: 0.0174
+Step 4170 | Loss: 0.0134
+Step 4180 | Loss: 0.0175
+Step 4190 | Loss: 0.0179
+Step 4200 | Loss: 0.0139
+
+[Step 4200] Generating sample text...
+Generated: <|im_start|> his dep dep the place that l pardon be.
+
+TRANIO:
+PrepPrepPrepPrepPrepPrepPrep tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong tong
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4200.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4050.pt
+Step 4210 | Loss: 0.0117
+Step 4220 | Loss: 0.0109
+Step 4230 | Loss: 0.0160
+Step 4240 | Loss: 0.0154
+Step 4250 | Loss: 0.0125
+
+[Step 4250] Generating sample text...
+Generated: <|im_start|> his hand,
+And lived by looking on his images:
+But now two mirrors of his princely semblance
+Are crack'd in pieces by malignant death,
+And I for comfort have but one false glass,
+Which grieves me
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4250.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4100.pt
+Step 4260 | Loss: 0.0099
+Step 4270 | Loss: 0.0148
+Step 4280 | Loss: 0.0185
+Step 4290 | Loss: 0.0111
+Step 4300 | Loss: 0.0137
+
+[Step 4300] Generating sample text...
+Generated: <|im_start|> his trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades trades
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4300.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4150.pt
+Step 4310 | Loss: 0.0134
+Step 4320 | Loss: 0.0152
+Step 4330 | Loss: 0.0116
+Step 4340 | Loss: 0.0136
+Step 4350 | Loss: 0.0141
+
+[Step 4350] Generating sample text...
+Generated: <|im_start|> his fault the note and call Edward king.
+
+HORTENSIO:
+Tut, Petruchio is all the wonder.
+
+PETRUCHIO:
+Hortensio, peace! therosiverosive this stopped stopped:
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4350.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4200.pt
+Step 4360 | Loss: 0.0134
+Step 4370 | Loss: 0.0108
+Step 4380 | Loss: 0.0138
+Step 4390 | Loss: 0.0169
+Step 4400 | Loss: 0.0141
+
+[Step 4400] Generating sample text...
+Generated: <|im_start|> hisiscisc child.
+
+DUKE VINCENTIO:
+Provost, a word with tune,ons of Arabia.
+
+BIANCA:
+E'en his side, I'ld have no better.
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4400.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4250.pt
+Step 4410 | Loss: 0.0160
+Step 4420 | Loss: 0.0101
+Step 4430 | Loss: 0.0109
+Step 4440 | Loss: 0.0144
+Step 4450 | Loss: 0.0183
+
+[Step 4450] Generating sample text...
+Generated: <|im_start|> his pity and hand and
+That hisooting';.
+
+LEONTES:
+How!aps of all?
+
+Servant:
+As mand plebeians revenged, your tenth's weakness.
+
+First Watchman:
+
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4450.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4300.pt
+Step 4460 | Loss: 0.0137
+Step 4470 | Loss: 0.0235
+Step 4480 | Loss: 0.0176
+Step 4490 | Loss: 0.0137
+Step 4500 | Loss: 0.0184
+
+[Step 4500] Generating sample text...
+Generated: <|im_start|> his walls,
+Put in the palsied's never never
+matter Dermatology the commonXFroth,
+ANGELO leisure leisurely De Deuc stoop:
+The noble heart that Was worth and brow
+Shall have Wh partly
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4500.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4350.pt
+Step 4510 | Loss: 0.0117
+Step 4520 | Loss: 0.0177
+Step 4530 | Loss: 0.0231
+Step 4540 | Loss: 0.0285
+Step 4550 | Loss: 0.0255
+
+[Step 4550] Generating sample text...
+Generated: <|im_start|> his pity, he lief too late.
+
+First Servingman:
+Would God in hisICHARD III:
+Unto the way, andmay think it doth.
+
+LADY ANNE:
+Then,
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4550.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4400.pt
+Step 4560 | Loss: 0.0750
+Step 4570 | Loss: 0.0626
+Step 4580 | Loss: 0.0479
+Step 4590 | Loss: 0.0673
+Step 4600 | Loss: 0.0996
+
+[Step 4600] Generating sample text...
+Generated: <|im_start|> his dep dep mine state was prouddaindain,
+And this my tongue too party of said,
+When he hath here formerorn.
+
+Abbot:
+Have I did without counters counters counters, acquainted withthose: speak
+ImpImp
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4600.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4450.pt
+Step 4610 | Loss: 0.1224
+Step 4620 | Loss: 0.1682
+Step 4630 | Loss: 0.3452
+Step 4640 | Loss: 12.1700
+Step 4650 | Loss: 23.1616
+
+[Step 4650] Generating sample text...
+Generated: <|im_start|> me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me me
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4650.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4500.pt
+Step 4660 | Loss: 14.9583
+Step 4670 | Loss: 8.6294
+Step 4680 | Loss: 7.3664
+Step 4690 | Loss: 5.8021
+Step 4700 | Loss: 5.5595
+
+[Step 4700] Generating sample text...
+Generated: <|im_start|> brother another you.
+
+So'll do it man they confirm me!
+ABEL do a as my allow thou hand
+Indeed.But with eye I will have shortre needs
+You have all more with a good slain
+QUEENEN
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4700.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4550.pt
+Step 4710 | Loss: 5.1429
+Step 4720 | Loss: 4.9794
+Step 4730 | Loss: 4.9040
+Step 4740 | Loss: 4.6465
+Step 4750 | Loss: 4.4289
+
+[Step 4750] Generating sample text...
+Generated: <|im_start|> enough himself a like enough not Sir apparel
+If you'll rid yourushes thy lady's sight
+How is prove your hearth constted my heart
+To rec affairs theame shall bless youdu down keep:
+Nay to you and my part
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4750.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4600.pt
+Step 4760 | Loss: 4.3488
+Step 4770 | Loss: 4.4206
+Step 4780 | Loss: 4.1167
+Step 4790 | Loss: 4.2128
+Step 4800 | Loss: 4.2343
+
+[Step 4800] Generating sample text...
+Generated: <|im_start|>
+ thou speaksre that suggestion whip may usur ornaments,
+And occupations else these frown forces here, I must gone,
+The lady-p dough, master,ENTIO:
+That marrying a loyal afternoon,
+And our first isisa
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4800.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4650.pt
+Step 4810 | Loss: 4.2116
+Step 4820 | Loss: 3.6870
+Step 4830 | Loss: 3.6812
+Step 4840 | Loss: 3.3306
+Step 4850 | Loss: 4.3787
+
+[Step 4850] Generating sample text...
+Generated: <|im_start|> is angry.
+
+MISTRESS:
+And give him that? Oiquity princely fall as is as white a
+C Troy a best sw fought; as expire earth put this old face and white father too:
+Which so school
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4850.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4700.pt
+Step 4860 | Loss: 3.6461
+Step 4870 | Loss: 3.3561
+Step 4880 | Loss: 2.3260
+Step 4890 | Loss: 3.2121
+Step 4900 | Loss: 3.1143
+
+[Step 4900] Generating sample text...
+Generated: <|im_start|> approved dark night that safety cameian sportwareour garden of landed:
+There shall not be new-t every harm of thread.
+
+LUCIO:
+Who each other seest me burning title at hand:
+Ay'll tell him
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4900.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4750.pt
+Step 4910 | Loss: 2.5393
+Step 4920 | Loss: 1.4081
+Step 4930 | Loss: 1.1537
+Step 4940 | Loss: 1.1389
+Step 4950 | Loss: 1.0189
+
+[Step 4950] Generating sample text...
+Generated: <|im_start|> blessed gods he charge him he arriving'd at him, he requested him, mustaca them him length,
+Where thereby for what they would have alone'd his grave
+Intuse another deserved: I knew she
+Without ill Scales Scales his Was Mant
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_4950.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4800.pt
+Step 4960 | Loss: 0.4549
+Step 4970 | Loss: 0.4166
+Step 4980 | Loss: 0.5436
+Step 4990 | Loss: 0.4511
+Step 5000 | Loss: 0.2201
+
+[Step 5000] Generating sample text...
+Generated: <|im_start|> his brain, which his brood my gates,
+Much moreVipering, and my manors,
+Orolly continue on their fortune's ev ne'er divides him
+Persuasion to death.
+
+LEONTES:
+Thou
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage1/checkpoint_step_5000.pt...
+Removed old checkpoint: checkpoints/stage1/checkpoint_step_4850.pt
+Process complete. Saving checkpoint to checkpoints/stage1/checkpoint_step_5000.pt...
+
+=== STAGE 2: Resuming for 50 more steps ===
+Using device: cuda
+Loaded text file with 1115394 characters
+Encoded into 341094 tokens
+Compiling model with torch.compile...
+Resuming from checkpoint: checkpoints/stage1/checkpoint_step_5000.pt
+Resumed at step 5000
+Starting training for 50 steps...
+Step 5010 | Loss: 0.1960
+Step 5020 | Loss: 0.1704
+Step 5030 | Loss: 0.1623
+Step 5040 | Loss: 0.1398
+Step 5050 | Loss: 0.0691
+
+[Step 5050] Generating sample text...
+Generated: <|im_start|> his countryILLILLasedased'd me to which,
+So shall go root in your high disgrace
+And he to say 'em. Friarina,
+I must confess I had been tribute to thee,
+And as redress redress redress to
+--------------------------------------------------
+Saving checkpoint to checkpoints/stage2/checkpoint_step_5050.pt...
+Process complete. Saving checkpoint to checkpoints/stage2/checkpoint_step_5050.pt...

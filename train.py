@@ -43,8 +43,9 @@ class TextDataset(Dataset):
 
 def train(max_steps=5000, resume_from=None, run_name="run1"):
     # Hyperparameters
-    BATCH_SIZE = 8
-    BLOCK_SIZE = 256
+    MAX_STEPS = 5000
+    BATCH_SIZE = 32
+    BLOCK_SIZE = 256 # Increased context length as well since we have memory
     LEARNING_RATE = 3e-4
     DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {DEVICE}")
@@ -56,9 +57,19 @@ def train(max_steps=5000, resume_from=None, run_name="run1"):
     dataset = TextDataset("input.txt", tokenizer, BLOCK_SIZE)
     train_loader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=True)
     
+    # Enable TF32 for faster matrix multiplication on Ampere GPUs
+    torch.set_float32_matmul_precision('high')
+    
     # Initialize Model
     config = SmolLMConfig()
     model = SmolLMForCausalLM(config).to(DEVICE)
+    
+    # Compile model for speedup (Linux/GPU only - skips or warns on Mac)
+    # Using 'default' mode which is essentially 'reduce-overhead'
+    if DEVICE.type == 'cuda':
+        print("Compiling model with torch.compile...")
+        model = torch.compile(model)
+        
     optimizer = torch.optim.AdamW(model.parameters(), lr=LEARNING_RATE)
     criterion = torch.nn.CrossEntropyLoss()
     
@@ -69,6 +80,8 @@ def train(max_steps=5000, resume_from=None, run_name="run1"):
         if os.path.exists(resume_from):
             print(f"Resuming from checkpoint: {resume_from}")
             checkpoint = torch.load(resume_from, map_location=DEVICE)
+            # Handle compiled model keys which might have '_orig_mod' prefix if saved directly from compiled model
+            # But typically we save state_dict which is clean.
             model.load_state_dict(checkpoint['model_state_dict'])
             optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
             # If start_step is saved, use it, otherwise 0 or inferred
@@ -88,6 +101,20 @@ def train(max_steps=5000, resume_from=None, run_name="run1"):
     step = start_step
     data_iter = iter(train_loader)
     
+    # Support Mixed Precision Training
+    scaler = torch.amp.GradScaler(enabled=(DEVICE.type == 'cuda'))
+    ctx = torch.amp.autocast(device_type=DEVICE.type, dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16) if DEVICE.type in ['cuda', 'cpu', 'mps'] else None
+    # Note: MPS autocast support might vary by PyTorch version, fallback to None context if needed or just use standard context
+    # Simply using nullcontext if not supported device
+    from contextlib import nullcontext
+    if DEVICE.type == 'mps':
+        # MPS mixed precision often uses float16
+        ctx = torch.amp.autocast(device_type='mps', dtype=torch.float16)
+    elif DEVICE.type == 'cuda':
+         ctx = torch.amp.autocast(device_type='cuda', dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16)
+    else:
+        ctx = nullcontext()
+
     while step < start_step + max_steps:
         try:
             x, y = next(data_iter)
@@ -97,14 +124,17 @@ def train(max_steps=5000, resume_from=None, run_name="run1"):
             
         x, y = x.to(DEVICE), y.to(DEVICE)
         
-        # Forward pass
-        logits = model(x)
-        loss = criterion(logits.view(-1, config.vocab_size), y.view(-1))
+        # Forward pass with Mixed Precision
+        with ctx:
+            logits = model(x)
+            loss = criterion(logits.view(-1, config.vocab_size), y.view(-1))
         
         # Backward pass
         optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+        # Scale loss for mixed precision stability
+        scaler.scale(loss).backward()
+        scaler.step(optimizer)
+        scaler.update()
         
         step += 1
         
